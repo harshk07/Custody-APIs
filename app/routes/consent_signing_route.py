@@ -105,7 +105,7 @@ class BuildTransactionData(BaseModel):
     created_at: datetime.datetime
     is_signed: bool
 
-@consentSigningRoute.post("/receive-build-transaction")
+@consentSigningRoute.post("/send-build-transaction")
 async def receive_build_transaction(build_txn_data: BuildTransactionData):
     try:
         # Retrieve the wallet details for the dp_id from user_wallet_details
